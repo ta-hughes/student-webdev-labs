@@ -9,7 +9,7 @@ body {
 .header,
 .section,
 .aside {
-  box-sizing: content-box;
+  box-sizing: border-box; /* important */
   padding: 10px;
   border: 4px solid var(--black);
 }
@@ -19,7 +19,7 @@ body {
 }
 
 .section {
-  display: inline-block;
+  display: inline-block; /* important for different element not going to newline */
   width: 75%;
   height: 300px;
   background-color: var(--orange);
