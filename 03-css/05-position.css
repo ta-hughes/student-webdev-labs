@@ -1,3 +1,14 @@
+/* 
+By default every element is static position
+  therefore placed according to NORMAL FLOW of webpage
+This FLOW is block or inline DISPLAY dependent
+BLOCK: spand whole length of parent contatiner
+      neighboring blocks are placed on newline
+INLINE: span whole lenght of parent but neighbors get put next to eachtoher.
+
+
+Relative, Absolute and Fixed for POSITION have differences
+*/
 :root {
   --darkviolet: #9400d3;
   --maroon: #800000;
@@ -9,18 +20,42 @@
   color: var(--white);
 }
 
+.main {
+  margin-top: 80px;
+}
+
+/* according to normal flow */
 .static {
+  position: static; /* this is redundant because the default is static */
+  width: 300px;
+  height: 400px;
   background-color: var(--darkviolet);
 }
 
 .relative {
+  position: relative;
+  top: -400px;
+  left: 310px;
+  width: 300px;
+  height: 400px;
   background-color: var(--purple);
 }
 
+/* completely different than the normal flow */
 .absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
   background-color: var(--maroon);
 }
 
 .fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
   background-color: var(--darkgolden);
 }
